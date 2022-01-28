@@ -1,3 +1,6 @@
+const body = document.querySelector("body");
+const sectionContainer = document.querySelector("#section-container");
+
 let starSet = [];
 let starCount = 0;
 let starColors = ["#fff5f2","#ffeedd","#ffcc6f","#b5c7ff"];
@@ -309,8 +312,7 @@ function switchContent(section,isProject){
         contentArea.className = "project-box";
     }
     contentArea.innerHTML = section;
-    el = document.getElementById("right");
-    document.getElementById('right').append(contentArea);
+    sectionContainer.append(contentArea);
     if (section == contact){
         contentArea.style.marginRight = "25%";
         contentArea.style.marginLeft = "25%";
